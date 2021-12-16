@@ -32,26 +32,26 @@ public class Main {
 
          //Questão a
         System.out.println("------a--------");
-         teacher1.ShowSubjects();
-         teacher2.ShowSubjects();
+         System.out.print(teacher1.ShowSubjects());
+         System.out.print(teacher2.ShowSubjects());
 
          //Questão b
         System.out.println("\n------b--------");
-        teacher1.ShowSchedulle();
-        teacher2.ShowSchedulle();
+        System.out.print(teacher1.ShowSchedulle());
+        System.out.print(teacher2.ShowSchedulle());
 
         //questao c
         System.out.println("\n------c--------");
-        geologia.listStudents();
+        System.out.print(geologia.listStudents());
 
         System.out.println("\n------d--------");
         //questao d
 
-        aluno1.showSubjects();
+        System.out.print(aluno1.showSubjects());
 
         //questao e
         System.out.println("\n------e--------");
-        aluno1.showschedule();
+        System.out.print(aluno1.showschedule());
 
         //questao f
         System.out.println("\n------f--------");

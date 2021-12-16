@@ -19,23 +19,28 @@ public class Aluno {
         this.name = name;
     }
 
-    public void showSubjects() {
+    public String showSubjects() {
+        StringBuffer aux = new StringBuffer();
         for (int i=0 ; i < subjects.size(); i++){
-            System.out.print(subjects.get(i).getName() + " ");
+            aux.append(subjects.get(i).getName() + " ");
 
         }
+        return aux.toString();
     }
 
 
     public ArrayList<Disciplina> getSubjects(){
         return this.subjects;
     }
-    public void showschedule() {
+
+    public String showschedule() {
+        StringBuffer aux = new StringBuffer();
+
         for (int i=0 ; i < subjects.size(); i++){
-            System.out.print(subjects.get(i).getTime() + " ");
+            aux.append(subjects.get(i).getTime() + " ");
 
         }
-
+        return aux.toString();
     }
 
 

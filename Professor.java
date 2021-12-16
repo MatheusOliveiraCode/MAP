@@ -22,18 +22,22 @@ public class Professor {
         this.subjects.add(subject);
     }
 
-    public void ShowSubjects(){
-        System.out.print("\nProfessor: " + this.name + "| Horários ");
+    public String ShowSubjects(){
+        StringBuffer aux = new StringBuffer();
+
         for (int i = 0 ; i < subjects.size();i++){
-            System.out.print(subjects.get(i).getName() +" ,");
+            aux.append(subjects.get(i).getName() +" ");
         }
+        return aux.toString();
     }
 
-    public void ShowSchedulle(){
-        System.out.print("\nProfessor: " + this.name + "| Disciplinas: ");
+    public String  ShowSchedulle(){
+        StringBuffer aux = new StringBuffer();
         for (int i = 0 ; i < subjects.size();i++){
-            System.out.print(subjects.get(i).getTime() +" ,");
+            aux.append(subjects.get(i).getTime() +" ");
         }
+
+        return aux.toString();
     }
 
 

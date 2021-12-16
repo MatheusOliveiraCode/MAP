@@ -32,11 +32,12 @@ public class Disciplina {
 
     }
 
-    public void listStudents(){
-        System.out.println("ALunos Cursando " + this.name + ": ");
+    public String listStudents(){
+        StringBuffer aux = new StringBuffer();
         for (int i = 0; i < students.size(); i++) {
-               System.out.print(students.get(i).getName() +',');
+               aux.append(students.get(i).getName() +' ');
         }
+        return aux.toString();
     }
 
     public int countStudents(){
