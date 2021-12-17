@@ -20,7 +20,16 @@ class DisciplinaTeste {
 
     @Test
     void listStudents() {
-    	
+        Disciplina dc = new Disciplina("programacao","2" , "Seg 13:00");
+        Aluno aluno = new Aluno("Jao",2);
+        Aluno aluno2 = new Aluno("Maria",3);
+        Aluno aluno3 = new Aluno("Jorge",4);
+
+        dc.addStudent(aluno);
+        dc.addStudent(aluno2);
+        dc.addStudent(aluno3);
+
+        assertEquals(dc.listStudents(), "Jao Maria Jorge ");
     }
 
     @Test
