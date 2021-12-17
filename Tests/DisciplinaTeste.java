@@ -15,7 +15,7 @@ class DisciplinaTeste {
         Disciplina dc = new Disciplina("programacao","2" , "Seg 13:00");
         Aluno aluno = new Aluno("Jao",2);
         dc.addStudent(aluno);
-        assertEquals(dc.listStudents(),"Jao ");
+        assertEquals(dc.listStudents(),"Jao");
     }
 
     @Test
@@ -29,7 +29,7 @@ class DisciplinaTeste {
         dc.addStudent(aluno2);
         dc.addStudent(aluno3);
 
-        assertEquals(dc.listStudents(), "Jao Maria Jorge ");
+        assertEquals(dc.listStudents(), "Jao,Maria,Jorge");
     }
 
     @Test

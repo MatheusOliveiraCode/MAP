@@ -9,7 +9,7 @@ class ProfessorTeste {
 	        Professor pf = new Professor("Charles" , 2);
 	        Disciplina dc = new Disciplina("Matematica","23","12:00");
 	        pf.addSubject(dc);
-	        assertEquals(pf.ShowSubjects(),"Matematica ");
+	        assertEquals(pf.ShowSubjects(),"Matematica");
 	    }
 
 	    @Test
@@ -19,7 +19,7 @@ class ProfessorTeste {
 	        Disciplina dc2 = new Disciplina("Fisica","34","21:00");
 	        pf.addSubject(dc);
 	        pf.addSubject(dc2);
-	        assertEquals(pf.ShowSubjects(),"Matematica Fisica ");
+	        assertEquals(pf.ShowSubjects(),"Matematica,Fisica");
 	    }
 
 	    @Test
@@ -29,7 +29,7 @@ class ProfessorTeste {
 	        Disciplina dc2 = new Disciplina("Fisica","34","13:00");
 	        pf.addSubject(dc);
 	        pf.addSubject(dc2);
-	        assertEquals(pf.ShowSchedulle(),"16:00 13:00 ");
+	        assertEquals(pf.ShowSchedulle(),"16:00,13:00");
 	    }
 
 }

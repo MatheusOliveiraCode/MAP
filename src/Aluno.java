@@ -23,7 +23,9 @@ public class Aluno {
     public String showSubjects() {
         StringBuffer aux = new StringBuffer();
         for (int i=0 ; i < subjects.size(); i++){
-            aux.append(subjects.get(i).getName() + " ");
+            aux.append(subjects.get(i).getName() );
+
+            if(i != subjects.size()-1) aux.append(',');
         }
         return aux.toString();
     }
@@ -38,7 +40,9 @@ public class Aluno {
         StringBuffer aux = new StringBuffer();
 
         for (int i=0 ; i < subjects.size(); i++){
-            aux.append(subjects.get(i).getTime() + " ");
+            aux.append(subjects.get(i).getTime());
+
+            if(i != subjects.size()-1) aux.append(',');
 
         }
         return aux.toString();

@@ -12,8 +12,8 @@ class ControleAcademicoTest {
 
         ca.enroll(aluno,dc);
 
-        assertEquals(aluno.showSubjects(),"matematica ");
-        assertEquals(dc.listStudents(), "maria ");
+        assertEquals(aluno.showSubjects(),"matematica");
+        assertEquals(dc.listStudents(), "maria");
     }
 
     @Test
@@ -24,7 +24,7 @@ class ControleAcademicoTest {
 
         ca.hireTeatcher(pf,dc);
 
-        assertEquals(pf.ShowSubjects(), "Fisica ");
+        assertEquals(pf.ShowSubjects(), "Fisica");
         assertEquals(dc.getProfessor().getName(), "Jon");
     }
 }

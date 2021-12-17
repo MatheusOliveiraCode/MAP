@@ -9,7 +9,7 @@ class AlunoTeste {
 	        Aluno alunoTeste = new Aluno("teste",2);
 	        Disciplina disciplinaTeste = new Disciplina("Matematica","2","21:00");
 	        alunoTeste.addSubject(disciplinaTeste);
-	        assertEquals(alunoTeste.showSubjects(),"Matematica ");
+	        assertEquals(alunoTeste.showSubjects(),"Matematica");
 	    }
 
 	    @Test
@@ -21,7 +21,7 @@ class AlunoTeste {
 	        alunoTest.addSubject(dc);
 	        alunoTest.addSubject(dc2);
 
-	        assertEquals(alunoTest.showschedule(),"13:00 14:00 ");
+	        assertEquals(alunoTest.showschedule(),"13:00,14:00");
 	    }
 
 
@@ -32,7 +32,7 @@ class AlunoTeste {
 	        Disciplina disciplinaTeste2 = new Disciplina("Quimica" , "3" ,"23:00" );
 	        alunoTeste.addSubject(disciplinaTeste);
 	        alunoTeste.addSubject(disciplinaTeste2);
-	        assertEquals(alunoTeste.showSubjects(),"Computacao Quimica ");
+	        assertEquals(alunoTeste.showSubjects(),"Computacao,Quimica");
 	    }
 
 }

@@ -24,6 +24,7 @@ public class Main {
          //Cadastrando alunos e professores no sistema
          ca.enroll(aluno1,geografia);
          ca.enroll(aluno2,geologia);
+         ca.enroll(aluno1,geologia);
 
          ca.hireTeatcher(teacher1,geografia);
          ca.hireTeatcher(teacher1,geologia);
@@ -52,10 +53,7 @@ public class Main {
         System.out.print("alunos matriculados na disciplina de geologia: " + geologia.listStudents());
         System.out.println();
         
-        ArrayList<Aluno> lista = geologia.getListStudents();
-        for(int i=0;i<lista.size();i++) {
-        	System.out.printf("aluno : %s \n",lista.get(i).getName());
-        }
+
         
       //questao d
 

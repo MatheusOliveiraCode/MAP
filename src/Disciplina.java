@@ -46,7 +46,10 @@ public class Disciplina {
     public String listStudents(){
         StringBuffer aux = new StringBuffer();
         for (int i = 0; i < students.size(); i++) {
-               aux.append(students.get(i).getName() +' ');
+               aux.append(students.get(i).getName());
+
+            if(i != students.size()-1) aux.append(',');
+
         }
         return aux.toString();
     }

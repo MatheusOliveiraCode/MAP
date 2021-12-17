@@ -23,7 +23,9 @@ public class Professor {
         StringBuffer aux = new StringBuffer();
 
         for (int i = 0 ; i < subjects.size();i++){
-            aux.append(subjects.get(i).getName() +" ");
+            aux.append(subjects.get(i).getName());
+
+            if(i != subjects.size()-1) aux.append(',');
         }
         return aux.toString();
     }
@@ -31,7 +33,9 @@ public class Professor {
     public String  ShowSchedulle(){
         StringBuffer aux = new StringBuffer();
         for (int i = 0 ; i < subjects.size();i++){
-            aux.append(subjects.get(i).getTime() +" ");
+            aux.append(subjects.get(i).getTime());
+
+            if(i != subjects.size()-1) aux.append(',');
         }
 
         return aux.toString();
