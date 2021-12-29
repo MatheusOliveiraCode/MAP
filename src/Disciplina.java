@@ -5,13 +5,14 @@ public class Disciplina {
     private String name;
     private  String classID;
     private String time;
-    private Professor professor;
+    private int  idProfessor;
     private ArrayList<Aluno> students = new ArrayList<Aluno>();
 
-    public Disciplina(String name, String classID, String time){
+    public Disciplina(String name, String classID, int idProfessor, String time){
          this.name =  name ;
          this.classID =  classID;
          this.time = time;
+         this.idProfessor = idProfessor;
     }
     
     public String getTime() {
@@ -62,11 +63,5 @@ public class Disciplina {
         return students.size();
     }
 
-    public Professor getProfessor() {
-        return professor;
-    }
 
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
-    }
 }
