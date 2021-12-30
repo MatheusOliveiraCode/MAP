@@ -1,38 +1,37 @@
-import java.util.ArrayList;
 
 public class Aluno {
+
+	private int id;
+	private String nome;
 	
-    private String name;
-    private int register;
+	public Aluno() {
+	}
+	
+	public Aluno(int id, String nome) throws ControleAcademicoException{
+		
+		this.setId(id);
+		this.setNome(nome);
+		
+		if(nome == null || nome== "" || id<0) {
+			throw new ControleAcademicoException();
+		}
+		
+	}
 
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public Aluno(String name, int register) throws AlunoException {
-        this.name = name;
-        this.register = register;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRegister() {
-        return register;
-    }
-
-    public void setRegister(int register) {
-        this.register = register;
-    }
-
-
-
-
-
-
-
-
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 }

@@ -1,62 +1,34 @@
-import java.util.ArrayList;
 
 public class Professor {
 	
-    private String name;
-    private int id;
-    private ArrayList<Disciplina> subjects = new ArrayList<Disciplina>();
+	private int id;
+	private String nome;
+	
+	public Professor() {}
+	
+	public Professor(int id, String nome) throws ControleAcademicoException{
+		this.setId(id);
+		this.setNome(nome);
+		
+		if(nome == null || nome== "" || id < 0) {
+			throw new ControleAcademicoException();
+		}
+	}
 
-    public  Professor(String name, int id ){
-        this.name = name;
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public ArrayList<Disciplina> getSubjects() {
-        return subjects;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void addSubject(Disciplina subject){
-        this.subjects.add(subject);
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public String ShowSubjects(){
-        StringBuffer aux = new StringBuffer();
-
-        for (int i = 0 ; i < subjects.size();i++){
-            aux.append(subjects.get(i).getName());
-
-            if(i != subjects.size()-1) aux.append(',');
-        }
-        return aux.toString();
-    }
-
-    public String  ShowSchedulle(){
-        StringBuffer aux = new StringBuffer();
-        for (int i = 0 ; i < subjects.size();i++){
-            aux.append(subjects.get(i).getTime());
-
-            if(i != subjects.size()-1) aux.append(',');
-        }
-
-        return aux.toString();
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 }

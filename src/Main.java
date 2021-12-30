@@ -1,48 +1,55 @@
-import java.nio.file.FileSystemAlreadyExistsException;
-import java.util.ArrayList;
 
 public class Main {
+	
+	public static void main(String[] args)throws ControleAcademicoException{
+		
+		//Instanciando um objeto da classe controle academico
+		ControleAcademico ca = new ControleAcademico("UEPB","Avenida Brasil");
+		
+		//criando um aluno com a logica creator onde passamos os dados e um metodo ira criar e ja adicionar
+		ca.addAluno("matheus");
+		//verificando quais alunos estao no sistema
+		System.out.println(ca.getAlunos());
+		
+		//criando um professor com a logica creator onde passamos os dados e um metodo ira criar e ja adicionar
+		ca.addProfessor("Sabrina");
+		ca.addProfessor("roberto");
+		//verificando quais professores estao no sistema
+		System.out.println(ca.getProfessores());
+		
+		//criando uma disciplina com a logica creator onde passamos os dados e um metodo ira criar e ja adicionar
+		ca.addDisciplina("geografia","16:00-18:00",1);
+		System.out.println(ca.getDisciplinas());
+		
+		//adiciona um aluno em uma turma, basta passar o id dos dois)
+		ca.addAlunoTurma(0, 0);
+		
+		
+		System.out.println("---------------------------------------------------------------");
+		
+		//A-quais disciplinas o professor esta ministrando:(basta passar o id do professor e ele retorna os hosrario dele)
+		System.out.println(ca.getDisciplinasPorfessor(1));
+		
+		//B-quais os horarios do porfessor:(basta passar o id do professor e ele retorna os horarios)
+		System.out.println(ca.getHorarioProfessor(1));
+				
+		//C-listar os alunos de uma turma
+		System.out.println(ca.listarAlunosTurma(0));
+		
+		//D-quais disciplinas o professor esta ministrando:(basta passar o id do professor e ele retorna os hosrario dele)
+		System.out.println(ca.getDisciplinasAluno(0));
+		
+		//E-quais os horarios do aluno:(basta passar o id do aluno e ele retorna os horarios)
+		System.out.println(ca.getHorarioAluno(0));
+		
+		//F-qual o tamanho da turma:(basta passar o id da turma e ele retorna o tamanho dela)
+		System.out.println(ca.getTamanhoTurma(0));
+		
+		
+		
 
-    public static void main(String[] args) throws AlunoException {
 
-        //TODO
-
-
-        ControleAcademico controleAcademico = new ControleAcademico();
-
-
-
-        controleAcademico.hire("Sabrina",1,"MAP","1","SEG 14:00");
-        controleAcademico.hire("Sabrina",1,"Algoritimos","2","SEG 16:00");
-        controleAcademico.hire("jon",2,"IDK","3","SEG 16:00");
-
-
-        System.out.println("Disciplinas mistradas por Sabrina: " +  controleAcademico.showTeacherSubject(1));
-
-
-        //2
-        System.out.println("Horários do professor Sabrina: " + controleAcademico.sheduleTrabalhador(1));
-
-
-        //3 TODO
-
-        
-
-
-        //4
-        controleAcademico.enrollStudent("Matheus",2);
-        controleAcademico.putSubject(2,"2");
-        controleAcademico.putSubject(2,"1");
-        System.out.println("Disciplinas cursadas por Matheus: "+controleAcademico.getRdm(2).showSubjects());
-
-        //5
-        System.out.println("Horários de Matheus: "  + controleAcademico.getRdm(2).showschedule());
-
-        //6 TODO
-
-
-        
-        
-    }
+		
+	}
 
 }
